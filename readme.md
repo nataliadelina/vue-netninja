@@ -1,4 +1,8 @@
-# Vue.js
+<img src="https://v3.vuejs.org/logo.png" width="50"> 
+
+# Vue.js 
+
+<!-- ![Vue.js logo](https://v3.vuejs.org/logo.png) -->
 
 ## Directives
 
