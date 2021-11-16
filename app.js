@@ -5,6 +5,12 @@ const app = Vue.createApp({
         }
     },
     methods: {
+        // changeTitle() {
+        //     this.title = 'new title'
+        // }
+        changeTitle(title) {
+            this.title = title
+        }
     }
 });
 
