@@ -2,6 +2,7 @@ const app = Vue.createApp({
     data() {
         return {
             title: 'Hello Vue',
+            showBooks: true
         }
     },
     methods: {
@@ -10,6 +11,9 @@ const app = Vue.createApp({
         // }
         changeTitle(title) {
             this.title = title
+        },
+        toggleShowBooks() {
+            this.toggleShowBooks = !this.showBooks
         }
     }
 });
