@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue net ninja</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="https://unpkg.com/vue@3.0.2"></script>
+    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
 </head>
 
 <body>
@@ -28,6 +30,17 @@
         <div v-show="showBooks">
             <p>currently showing this</p>
         </div>
+
+        <!-- MOUSE EVENTS -->
+        <div class="box" @mouseover="handleEvent">mouseover (enter)</div>
+        <div class="box" v-on:mouseleave="handleEvent">mouseleave</div>
+        <div class="box" v-on:dblclick="handleEvent">double click</div>
+        <div class="box" @mousemove="handleMousemove">
+            position: {{x}} - {{y}}
+        </div>
+
+        <!-- passing custom argument -->
+        <div class="box" v-on:mouseover="handleEvent($event, 5)">mouseover</div>
 
     </div>
 
