@@ -15,9 +15,12 @@
 
 ```html
 <h1>{{title}}</h1>
-
 <!-- <button @click="changeTitle">change title</button> -->
 <button @click="changeTitle('something new')">change title</button>
+
+<p>{{count}}</p>
+<button v-on:click="count++">increment</button>
+<button @click="count--">decrement</button>
 
 ```
 
@@ -27,7 +30,8 @@
 const app = Vue.createApp({
     data() {
         return {
-            title: 'Hello Vue'
+            title: 'Hello Vue',
+            count: 0
         }
     },
     methods: {

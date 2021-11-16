@@ -1,7 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
-            title: 'Hello Vue'
+            title: 'Hello Vue',
         }
     },
     methods: {
