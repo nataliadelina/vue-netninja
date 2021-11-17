@@ -18,27 +18,30 @@
         <button @click="changeTitle('something new')">change title</button>
 
         <!-- CONDITIONAL -->
-        <!-- v-if, v-else -->
-        <div v-if="showBooks">
-            <p>some books here</p>
-            <!-- LIST  MANUAL -->
-            <!-- <p>{{books[0].title}}, {{books[0].author}}</p> -->
-            <!-- LIST -->
-            <ul>
-                <li v-for="book in books">
-                    <img :src="book.img" :alt="book.title" width="200">
-                    <h3>{{book.title}}</h3>
-                    <p>{{book.author}}</p>
-                </li>
-            </ul>
-        </div>
-        <button @click="toggleShowBooks">
-            <span v-if="showBooks">hide books</span>
-            <span v-else>show books</span>
-        </button>
-        <!-- v-show (display:block if true and display:none if it's false) -->
-        <div v-show="showBooks">
-            <p>currently showing this</p>
+        <div>
+            <!-- v-if, v-else -->
+            <div v-if="showBooks">
+                <p>some books here</p>
+                <!-- LIST  MANUAL -->
+                <!-- <p>{{books[0].title}}, {{books[0].author}}</p> -->
+                <!-- LIST -->
+                <ul>
+                    <li v-for="book in books" :class="{fav: book.isFav}">
+                        <img :src="book.img" :alt="book.title" width="200">
+                        <h3>{{book.title}}</h3>
+                        <p>{{book.author}}</p>
+                        <button @click="toggleFav(book)" class="btn">fav</button>
+                    </li>
+                </ul>
+            </div>
+            <button @click="toggleShowBooks">
+                <span v-if="showBooks">hide books</span>
+                <span v-else>show books</span>
+            </button>
+            <!-- v-show (display:block if true and display:none if it's false) -->
+            <div v-show="showBooks">
+                <p>currently showing this</p>
+            </div>
         </div>
 
         <!-- MOUSE EVENTS -->

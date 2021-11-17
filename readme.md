@@ -19,3 +19,7 @@
 ## Outputting List
 
 [outputting list](./notes/outputting-list.md)
+
+## Dynamic classes
+
+[dynamic classes](./notes/dynamic-classes.md)
