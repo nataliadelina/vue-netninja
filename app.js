@@ -3,6 +3,9 @@ const app = Vue.createApp({
         return {
             title: 'Hello Vue',
             showBooks: true,
+            books: [{ title: 'one book', author: 'max', img: './assets/1.jpg' },
+            { title: 'another one book', author: 'ae', img: './assets/2.jpg' },
+            { title: 'good book', author: 'lee', img: './assets/3.jpg' }],
             x: 0,
             y: 0
         }
@@ -15,9 +18,9 @@ const app = Vue.createApp({
             this.title = title
         },
         toggleShowBooks() {
-            this.toggleShowBooks = !this.showBooks
+            this.showBooks = !this.showBooks
         },
-        handleEvent(e) {
+        handleEvent(e, data) {
             console.log(e, e.type)
             if (data) {
                 console.log(data)

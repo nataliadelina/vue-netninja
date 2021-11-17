@@ -21,6 +21,16 @@
         <!-- v-if, v-else -->
         <div v-if="showBooks">
             <p>some books here</p>
+            <!-- LIST  MANUAL -->
+            <!-- <p>{{books[0].title}}, {{books[0].author}}</p> -->
+            <!-- LIST -->
+            <ul>
+                <li v-for="book in books">
+                    <img :src="book.img" :alt="book.title" width="200">
+                    <h3>{{book.title}}</h3>
+                    <p>{{book.author}}</p>
+                </li>
+            </ul>
         </div>
         <button @click="toggleShowBooks">
             <span v-if="showBooks">hide books</span>
